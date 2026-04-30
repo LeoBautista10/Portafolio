@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Leo Brady - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <style>
+        #main-nav .active {
+            color: #b0c6ff !important;
+            border-bottom: 2px solid #b0c6ff;
+            padding-bottom: 0.25rem;
+        }
+    </style>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            background-color: #10131a;
+            color: #e1e2eb;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .animate-spin-slow {
+            animation: spin 8s linear infinite;
+        }
+
+        .btnDescarga {
+            align-content: center;
+        }
+
+        .listadosActividades {
+            list-style: unset;
+            padding-left: 18px;
+            padding-bottom: 10px;
+        }
+
+            .listadosActividades > li {
+                padding-bottom: 5px;
+            }
+
+        .listadoDeUtilizadas {
+            padding-bottom: 10px;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <style>
+        /*Botones y foto cuando sea hasta 1024px*/
+        @media (max-width: 1024px) {
+            #btnsS1 {
+                justify-content: center;
+            }
+
+            #photoLB {
+                justify-items: center;
+            }
+
+            .ListaDatosDeContacto {
+                display: block !important;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .ListaDatosDeContacto {
+                display: flex !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary-container selection:text-primary" data-bs-spy="scroll" data-bs-target="#main-nav">
+    <header class="bg-[#10131a]/70 backdrop-blur-lg fixed top-0 w-full z-50 shadow-[0_48px_48px_-12px_rgba(60,71,90,0.06)]">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20" id="main-nav">
+            <div class="text-xl font-black text-[#e1e2eb] font-['Manrope'] tracking-tighter">Leo Brady Bautista Santiago</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="pb-1 font-['Manrope'] font-bold tracking-tighter transition-colors duration-300 text-[#c5c6cd]" href="#sobre-mi">Sobre mí</a>
+                <a class="text-[#c5c6cd] font-medium font-['Manrope'] tracking-tighter hover:text-[#b0c6ff] transition-colors duration-300" href="#formacion">Formación</a>
+                <a class="text-[#c5c6cd] font-medium font-['Manrope'] tracking-tighter hover:text-[#b0c6ff] transition-colors duration-300" href="#experiencia">Experiencia</a>
+                <a class="text-[#c5c6cd] font-medium font-['Manrope'] tracking-tighter hover:text-[#b0c6ff] transition-colors duration-300" href="#proyectos">Proyectos</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a class="bg-[#b0c6ff] text-[#002d6f] px-6 py-2 rounded-lg font-bold font-['Manrope'] tracking-tighter scale-95 active:scale-90 transition-transform" href="CV_Leo_Bautista.pdf" download="CV - Leo Bautista.pdf">Descargar CV</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-20 pb-5 overflow-hidden" id="sobre-mi">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-container/20 to-transparent pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="lg:col-span-7">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                        <span class="text-tertiary font-mono text-sm tracking-widest uppercase">Soporte Tecnico, Redes, Programacion, Analisis de datos</span>
+                    </div>
+                    <h1 class="font-display text-6xl md:text-7xl font-extrabold tracking-tighter text-on-surface mb-8 leading-[0.9]">
+                        Ingeniero en <span class="text-primary italic">Sistemas </span>Computacionales.
+                    </h1>
+                    <p class="text-on-surface-variant text-lg md:text-xl max-w-2xl leading-relaxed mb-10 font-body">
+                        Especializado en el despliegue de infraestructuras críticas y desarrollo de soluciones escalables. Transformo arquitecturas complejas en sistemas eficientes y resilientes.
+                    </p>
+                    <div id="btnsS1" class="flex flex-wrap gap-4 items-center">
+                        <div class="dropdown">
+                            <button aria-expanded="false" class="bg-surface-container-highest text-on-surface px-8 h-[60px] rounded-xl font-bold font-display shadow-lg hover:shadow-primary/10 hover:scale-105 active:scale-95 transition-all dropdown-toggle flex items-center gap-2 group" data-bs-toggle="dropdown" type="button">
+                                Contacto
+                                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                            </button>
+                            <ul class="dropdown-menu bg-surface-container-high border border-outline-variant/20 p-2 rounded-xl mt-2 shadow-2xl" style="display: none; position: absolute; z-index: 1;">
+                                <li><a class="dropdown-item text-on-surface hover:bg-primary-container hover:text-primary rounded-lg px-4 py-3 font-display text-sm flex items-center gap-3" href="https://wa.me/8994609220"><span class="material-symbols-outlined text-[1.2rem]">call</span>8994609220</a></li>
+                                <li><a class="dropdown-item text-on-surface hover:bg-primary-container hover:text-primary rounded-lg px-4 py-3 font-display text-sm flex items-center gap-3" href="#"><span class="material-symbols-outlined text-[1.2rem]">mail</span>leo.bautiasta05@gmail.com</a></li>
+                                <li><a class="dropdown-item text-on-surface hover:bg-primary-container hover:text-primary rounded-lg px-4 py-3 font-display text-sm flex items-center gap-3" href="#"><span class="material-symbols-outlined text-[1.2rem]">mail</span>leo.bautiasta05@hotmail.com</a></li>
+                                <li><a class="dropdown-item text-on-surface hover:bg-primary-container hover:text-primary rounded-lg px-4 py-3 font-display text-sm flex items-center gap-3" href="https://www.linkedin.com/in/Leo-Brady-BS"><span class="material-symbols-outlined text-[1.2rem]">link</span>LinkedIn</a></li>
+                            </ul>
+                        </div>
+                        <a class="btnDescarga bg-primary text-on-primary px-8 h-[60px] rounded-xl font-bold font-display shadow-lg shadow-primary/10 hover:shadow-primary/30 hover:scale-105 hover:brightness-110 active:scale-95 transition-all" href="CV_Leo_Bautista.pdf" download="CV - Leo Bautista.pdf">Descargar CV</a>
+                    </div>
+                </div>
+                <div id="photoLB" class="lg:col-span-5 relative">
+                    <div class="aspect-square rounded-full border-[1px] border-outline-variant/30 absolute -inset-4 animate-spin-slow"></div>
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700">
+                        <img alt="Leo Brady Bautista Santiago" class="object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Foto de CV" width="512" height="512" src="photo.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Formación Académica -->
+        <section class="py-24 bg-surface-container-low" id="formacion">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div>
+                        <h2 class="font-display text-5xl font-extrabold tracking-tighter text-on-surface mb-4">Formación <span class="text-primary">Académica</span></h2>
+                        <p class="text-on-surface-variant max-w-xl">Cimientos sólidos en ingeniería y certificaciones de industria para liderar entornos tecnológicos de alto rendimiento.</p>
+                    </div>
+                    <div class="h-px flex-grow mx-12 mb-4 bg-outline-variant/20 hidden md:block"></div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <!-- Academic Item 1 -->
+                    <div class="group bg-surface-container-lowest p-8 rounded-2xl hover:bg-surface-container-high transition-all duration-300 flex items-center justify-between shadow-sm hover:shadow-xl border border-transparent hover:border-outline-variant/10">
+                        <div class="flex items-center gap-8">
+                            <div class="bg-primary-container/30 p-4 rounded-xl">
+                                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold font-display text-on-surface group-hover:text-primary transition-colors">Ingeniería en Sistemas Computacionales</h3>
+                                <p class="text-on-surface-variant font-medium">Universidad Tamaulipeca</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-tertiary font-mono text-lg font-bold">2017 - 2020</span>
+                        </div>
+                    </div>
+                    <!-- Academic Item 2 -->
+                    <div class="group bg-surface-container-lowest p-8 rounded-2xl hover:bg-surface-container-high transition-all duration-300 flex items-center justify-between shadow-sm hover:shadow-xl border border-transparent hover:border-outline-variant/10">
+                        <div class="flex items-center gap-8">
+                            <div class="bg-primary-container/30 p-4 rounded-xl">
+                                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold font-display text-on-surface group-hover:text-primary transition-colors">Técnico Profesional Bachiller en Informática</h3>
+                                <p class="text-on-surface-variant font-medium">CONALEP</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-tertiary font-mono text-lg font-bold">2014 - 2017</span>
+                        </div>
+                    </div>
+
+                    <!-- Certificados Item 1 -->
+                    <div class="group bg-surface-container-lowest p-8 rounded-2xl hover:bg-surface-container-high transition-all duration-300 flex items-center justify-between shadow-sm hover:shadow-xl border border-transparent hover:border-outline-variant/10">
+                        <div class="flex items-center gap-8">
+                            <div class="bg-primary-container/30 p-4 rounded-xl">
+                                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold font-display text-on-surface group-hover:text-primary transition-colors">Certificaciones</h3>
+                                <p class="text-on-surface-variant font-medium">Six Sigma Black Belt</p>
+                                <p class="text-on-surface-variant font-medium">Six Sigma Green Belt</p>
+                                <p class="text-on-surface-variant font-medium">PCEP – Certified Entry Level Python Programmer</p>
+                                <p class="text-on-surface-variant font-medium">SolidWorks</p>
+                                <p class="text-on-surface-variant font-medium">Paqueteria de Microsoft Office</p>
+                                <p class="text-on-surface-variant font-medium">Habilidades Directivas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Habilidades Item 1 -->
+                    <div class="group bg-surface-container-lowest p-8 rounded-2xl hover:bg-surface-container-high transition-all duration-300 flex items-center justify-between shadow-sm hover:shadow-xl border border-transparent hover:border-outline-variant/10">
+                        <div class="flex items-center gap-8">
+                            <div class="bg-primary-container/30 p-4 rounded-xl">
+                                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold font-display text-on-surface group-hover:text-primary transition-colors">Habilidades</h3>
+                                <p class="text-on-surface-variant font-medium">Microsoft Office</p>
+                                <p class="text-on-surface-variant font-medium">SolidWorks</p>
+                                <p class="text-on-surface-variant font-medium">Programación</p>
+                                <p class="text-on-surface-variant font-medium">Implementación de proyectos</p>
+                                <p class="text-on-surface-variant font-medium">Solidworks</p>
+                                <p class="text-on-surface-variant font-medium">Administración de sistemas y bases de datos</p>
+                                <p class="text-on-surface-variant font-medium">Desarrollo de software</p>
+                                <p class="text-on-surface-variant font-medium">Solución de problemas de software y hardware</p>
+                                <p class="text-on-surface-variant font-medium">Análisis de datos</p>
+                                <p class="text-on-surface-variant font-medium">Soporte Técnico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experiencia Section -->
+        <section class="py-24 bg-background" id="experiencia">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="font-display text-4xl font-extrabold tracking-tighter text-on-surface mb-16 flex items-center gap-4">Experiencia <span class="text-primary">Profesional</span></h2>
+                <div class="space-y-12">
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="hidden md:block absolute left-1/4 top-0 bottom-0 w-[2px] bg-primary/40"></div>
+
+                        <div class="md:grid md:grid-cols-4 gap-8">
+                            <div class="md:text-right md:pr-12 mb-4 md:mb-0">
+                                <p class="text-tertiary font-mono font-bold tracking-widest">2021 - Actualmente</p>
+                                <p class="text-on-surface-variant text-sm">Battycell S.A. De C.V.</p>
+                            </div>
+                            <div class="md:col-span-3 pb-8">
+                                <div class="md:absolute md:left-1/4 md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10 hidden md:block bg-primary shadow-[0_0_10px_rgba(176,198,255,0.5)]"></div>
+                                <h3 class="text-2xl font-bold font-display text-on-surface mb-3">Programador, analista y soporte IT</h3>
+                                <ul class="listadosActividades">
+                                    <li>Encargado de diseñar, programar y dar mantenimiento a programas y páginas web para dar soluciones automatizadas en la empresa.</li>
+                                    <li>Dar soporte en aplicaciones, programas, sistemas y páginas web.</li>
+                                    <li>Administración de las bases de datos.</li>
+                                    <li>Dar soporte técnico tanto de software como de hardware en computadoras, smartphones, impresoras, cableado, redes, etc. tanto remoto como en persona.</li>
+                                    <li>Administración en compras y gestión de equipo de cómputo y varios puntos del mismo departamento.</li>
+                                    <li>Instalación de pantallas de publicidad.</li>
+                                    <li>Administración e instalación de CCTV.</li>
+                                    <li>Análisis de datos y reportería con Power BI.</li>
+                                    <li>Implementación de nuevos proyectos.</li>
+                                </ul>
+
+                                <span class="font-bold">Tecnologías utilizadas:</span>
+                                <div class="flex flex-wrap gap-2 listadoDeUtilizadas">
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">.NET</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">ASP.NET</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">MVC</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">MVVM</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">WEB API</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">C#</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">HTML</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">XAML</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">XHTML</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">CSS</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Bootstrap</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">JavaScript</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">JQuery</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">SQL</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Python</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">WordPress</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">DAX</span>
+                                </div>
+
+                                <span class="font-bold">Herramientas utilizadas:</span>
+                                <div class="flex flex-wrap gap-2 listadoDeUtilizadas">
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Visual Studio</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Spyder</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">SQL Server Management Studio</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">MySQL</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Power Bi</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">NO-IP</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">IIS</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">XAMPP</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Anydesk</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Figma</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Draw.io</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">IA</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">OpenCode</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Postman</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Microsoft Office</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Hik-Connect</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">SADP</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Omada TP-Link</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">PuTTY</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Synology</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Pi-Hole</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Photoshop</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">GitHub</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="md:grid md:grid-cols-4 gap-8">
+                            <div class="md:text-right md:pr-12 mb-4 md:mb-0">
+                                <p class="text-tertiary font-mono font-bold tracking-widest">2023 - Actualmente</p>
+                                <p class="text-on-surface-variant text-sm">Inte / HPE</p>
+                            </div>
+                            <div class="md:col-span-3 pb-8">
+                                <div class="md:absolute md:left-1/4 md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10 hidden md:block bg-primary shadow-[0_0_10px_rgba(176,198,255,0.5)]"></div>
+
+                                <h3 class="text-2xl font-bold font-display text-on-surface mb-3">Ingeniero de campo</h3>
+                                <ul class="listadosActividades">
+                                    <li>Soporte técnico a servidores.</li>
+                                    <li>Soporte técnico a equipos de red.</li>
+                                    <li>Montaje y desmontaje de servidores y racks.</li>
+                                    <li>Instalación de cableado.</li>
+                                    <li>Instalación de equipos de red.</li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="md:grid md:grid-cols-4 gap-8">
+                            <div class="md:text-right md:pr-12 mb-4 md:mb-0">
+                                <p class="text-tertiary font-mono font-bold tracking-widest">2020 - 2021</p>
+                                <p class="text-on-surface-variant text-sm">iQor Global Services de México</p>
+                            </div>
+                            <div class="md:col-span-3 pb-8">
+                                <div class="md:absolute md:left-1/4 md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10 hidden md:block bg-primary shadow-[0_0_10px_rgba(176,198,255,0.5)]"></div>
+                                <h3 class="text-2xl font-bold font-display text-on-surface mb-3">Practicante en programador y soporte IT</h3>
+                                <ul class="listadosActividades">
+                                    <li>Encargado de dar soporte al área de Recursos Humanos.</li>
+                                    <li>Dar soporte en aplicaciones y sitios web.</li>
+                                    <li>Creación y mantenimiento de sitios web.</li>
+                                    <li>Administración de bases de datos.</li>
+                                </ul>
+
+                                <span class="font-bold">Tecnologías utilizadas:</span>
+                                <div class="flex flex-wrap gap-2 listadoDeUtilizadas">
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">ASP.NET</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">C#</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">MVVM</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">HTML</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">XHTML</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">CSS</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Bootstrap</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">JQuery</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">JavaScript</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">SQL</span>
+                                </div>
+
+                                <span class="font-bold">Herramientas utilizadas:</span>
+                                <div class="flex flex-wrap gap-2 listadoDeUtilizadas">
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Visual Studio</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">SQL Server Management Studio</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">Paqueteria Microsoft Office (Excel, Word, PowerPoint, Etc.)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="md:grid md:grid-cols-4 gap-8">
+                            <div class="md:text-right md:pr-12 mb-4 md:mb-0">
+                                <p class="text-tertiary font-mono font-bold tracking-widest">2017 - 2020</p>
+                                <p class="text-on-surface-variant text-sm">Alcom Electrónicos de México</p>
+                            </div>
+                            <div class="md:col-span-3 pb-8">
+                                <div class="md:absolute md:left-1/4 md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10 hidden md:block bg-primary shadow-[0_0_10px_rgba(176,198,255,0.5)]"></div>
+                                <h3 class="text-2xl font-bold font-display text-on-surface mb-3">Operador multifuncional y materialista</h3>
+                                <ul class="listadosActividades">
+                                    <li>Inventario de forma física y por sistema.</li>
+                                    <li>Inventarios de material físico mensuales.</li>
+                                    <li>Suministro de material para líneas de producción.</li>
+                                    <li>Requerimientos de material.</li>
+                                    <li>Prueba de calidad de materiales.</li>
+                                    <li>Ensamble.</li>
+                                    <li>Soldador.</li>
+                                    <li>Inspección.</li>
+                                    <li>Responsable de la línea de producción.</li>
+                                </ul>
+
+                                <span class="font-bold">Herramientas utilizadas:</span>
+                                <div class="flex flex-wrap gap-2 listadoDeUtilizadas">
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">SAP MES</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">SMTRACK</span>
+                                    <span class="bg-surface-container-low px-3 py-1 rounded text-xs font-medium text-on-surface-variant">AS400</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Proyectos Section -->
+        <section class="py-24 bg-surface" id="proyectos">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="font-display text-4xl font-extrabold tracking-tighter text-on-surface mb-16 flex items-center gap-4">Proyectos <span class="text-primary">Destacados</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Project 1 -->
+                    <div class="group relative overflow-hidden rounded-3xl bg-surface-container-low border border-outline-variant/10">
+                        <div class="aspect-video overflow-hidden">
+                            <img alt="Project Nebula" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern server room with glowing blue LED lights on racks, symmetric perspective, high tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNPUUQl9lVQ9192BBzipERjgbNAXF8801lJ05PPQH5CF5GEUKcLq229fnMN5xhmMrC7Z0dnGfIAypT_cTw_LmnW19R4HOBWFpXdArpZPKeis3xl0mZsGLRf8GH91VNcxWMpoX17HSfNruIZ0cbz2dY3ZQk5d6755Sr4f77qSq9nIteMV7rabGweyzXw5nm2nvfl2nkAecUWQTOt_EICSN6p0vvRnEH28D3S7NtQ7ZCkV5iPw3uVrnCfcrOzciu5HBJwX5ZlGpEIxod" />
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold font-display text-on-surface group-hover:text-primary transition-colors">Sistema de Orquestación "Nebula"</h3>
+                                <a class="text-primary hover:text-on-primary-container" href="#">
+                                    <span class="material-symbols-outlined">open_in_new</span>
+                                </a>
+                            </div>
+                            <p class="text-on-surface-variant mb-6 font-body">Automatización completa de despliegues para entornos de microservicios con recuperación ante desastres automática.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-surface-container-lowest px-4 py-1.5 rounded-full text-xs font-semibold text-primary">Go</span>
+                                <span class="bg-surface-container-lowest px-4 py-1.5 rounded-full text-xs font-semibold text-primary">Kubernetes API</span>
+                                <span class="bg-surface-container-lowest px-4 py-1.5 rounded-full text-xs font-semibold text-primary">gRPC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="group relative overflow-hidden rounded-3xl bg-surface-container-low border border-outline-variant/10">
+                        <div class="aspect-video overflow-hidden">
+                            <img alt="Data Insights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Digital dashboard with clean analytical charts and data visualizations on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXACFXVdbbU0yw0Si2IJKmE81UdwJsokjwo5OCLf7p-ycB1iXU4s9HRGnZUUF7IspghzCKMO652J2lmZ2MYHcTZSbpXNdAR_osIz5HpCtMDyF3yuql3jBoJ1JM0qHqB359-TyBNqahtEuKPCCh444b0FUbL64NtHaQPT9nIpyoIAC6pFyP1BFrsP4uCaGhFNXfX8NGtiTvxD-ai9-COE6SUENaiEzRj8ST6odf6V5Hf47LXFJpw2xgb8dbQUm6IyNSIMwlTUZRJ5o3" />
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold font-display text-on-surface group-hover:text-primary transition-colors">Plataforma de Analítica de Tráfico</h3>
+                                <a class="text-primary hover:text-on-primary-container" href="#">
+                                    <span class="material-symbols-outlined">open_in_new</span>
+                                </a>
+                            </div>
+                            <p class="text-on-surface-variant mb-6 font-body">Dashboard en tiempo real para el monitoreo de tráfico de red y detección de patrones de ataque DDoS mediante ML.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-surface-container-lowest px-4 py-1.5 rounded-full text-xs font-semibold text-primary">Python</span>
+                                <span class="bg-surface-container-lowest px-4 py-1.5 rounded-full text-xs font-semibold text-primary">Elasticsearch</span>
+                                <span class="bg-surface-container-lowest px-4 py-1.5 rounded-full text-xs font-semibold text-primary">React</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#0b0e14] py-12 border-t border-[#45474d]/10">
+        <div class="max-w-7xl mx-auto px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start">
+                <span class="text-[#dfc299] font-mono mb-2">Leo Brady Bautista Santiago</span>
+                <p class="text-[#c5c6cd] font-['Inter'] text-sm tracking-wide text-center md:text-left">© 2026 | V1</p>
+            </div>
+            <div class="flex items-center space-x-8">
+                <a class="text-[#c5c6cd] font-['Inter'] text-sm tracking-wide hover:text-[#dfc299] transition-all opacity-80 hover:opacity-100" href="https://www.linkedin.com/in/Leo-Brady-BS">LinkedIn</a>
+                <a class="text-[#c5c6cd] font-['Inter'] text-sm tracking-wide hover:text-[#dfc299] transition-all opacity-80 hover:opacity-100" href="https://github.com/LeoBautista10">GitHub</a>
+                <a class="text-[#c5c6cd] font-['Inter'] text-sm tracking-wide hover:text-[#dfc299] transition-all opacity-80 hover:opacity-100" href="leo.bautiasta05@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#10131a",
+                        "surface-variant": "#32353c",
+                        "tertiary-fixed": "#fcdeb3",
+                        "surface-container-highest": "#32353c",
+                        "on-secondary-container": "#aab6cc",
+                        "on-primary-fixed": "#001945",
+                        "primary": "#b0c6ff",
+                        "outline-variant": "#45474d",
+                        "on-primary": "#002d6f",
+                        "inverse-primary": "#2b5bb5",
+                        "error": "#ffb4ab",
+                        "outline": "#8f9097",
+                        "surface-container-lowest": "#0b0e14",
+                        "surface-container-high": "#272a31",
+                        "inverse-surface": "#e1e2eb",
+                        "error-container": "#93000a",
+                        "surface": "#10131a",
+                        "on-primary-fixed-variant": "#00429c",
+                        "inverse-on-surface": "#2e3037",
+                        "on-secondary-fixed": "#111c2c",
+                        "tertiary-container": "#332306",
+                        "secondary-fixed": "#d8e3fa",
+                        "primary-container": "#00235a",
+                        "on-error": "#690005",
+                        "on-surface": "#e1e2eb",
+                        "on-tertiary-fixed-variant": "#574423",
+                        "secondary": "#bcc7dd",
+                        "on-surface-variant": "#c5c6cd",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "surface-container-low": "#191c22",
+                        "on-tertiary": "#3f2d0f",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "surface-dim": "#10131a",
+                        "surface-container": "#1d2026",
+                        "secondary-container": "#3c475a",
+                        "on-tertiary-container": "#a28963",
+                        "on-background": "#e1e2eb",
+                        "surface-tint": "#b0c6ff",
+                        "primary-fixed": "#d9e2ff",
+                        "surface-bright": "#363940",
+                        "on-secondary": "#263142",
+                        "tertiary-fixed-dim": "#dfc299",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "on-tertiary-fixed": "#271901",
+                        "on-primary-container": "#608ae8",
+                        "tertiary": "#dfc299",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            if (dropdownToggle && dropdownMenu) {
+                dropdownToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const isExpanded = dropdownMenu.classList.contains('ListaDatosDeContacto');
+
+                    if (!isExpanded) {
+                        dropdownMenu.classList.add('ListaDatosDeContacto');
+                        dropdownToggle.setAttribute('aria-expanded', 'true');
+                        // Apply active styles: blue background, dark text
+                        dropdownToggle.classList.remove('bg-surface-container-highest', 'text-on-surface');
+                        dropdownToggle.classList.add('bg-primary', 'text-on-primary');
+                    }
+                    else {
+                        dropdownMenu.classList.remove('ListaDatosDeContacto');
+                        dropdownToggle.setAttribute('aria-expanded', 'false');
+                        // Revert to inactive styles: gray background, light text
+                        dropdownToggle.classList.add('bg-surface-container-highest', 'text-on-surface');
+                        dropdownToggle.classList.remove('bg-primary', 'text-on-primary');
+                    }
+                });
+
+                document.addEventListener('click', function (e) {
+                    if (!dropdownToggle.contains(e.target)) {
+                        dropdownMenu.classList.remove('ListaDatosDeContacto');
+                        dropdownToggle.setAttribute('aria-expanded', 'false');
+                        dropdownToggle.classList.add('bg-surface-container-highest', 'text-on-surface');
+                        dropdownToggle.classList.remove('bg-primary', 'text-on-primary');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
